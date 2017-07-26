@@ -16,8 +16,9 @@ const client = new ApolloClient({
 
 type State = { counter: number };
 
-class TheGraphQLThing extends PureComponent<void, ChildProps<{}, Response>, State> {
-    state = {
+class TheGraphQLThing extends PureComponent {
+    props: ChildProps<{}, Response>;
+    state: State = {
         counter: 0,
     };
     
@@ -34,10 +35,7 @@ class TheGraphQLThing extends PureComponent<void, ChildProps<{}, Response>, Stat
         if (loading) {
             return <Text>Loading</Text>;
         }
-        
-        // $FlowFixMe remove this comment to test prop types
-        const shouldCauseAFlowError: number = allTrips[0].test;
-        
+
         return (
             <View style={{alignItems: "center", justifyContent: "center"}}>
                 <Text>Number of trips: {allTrips.length}</Text>
