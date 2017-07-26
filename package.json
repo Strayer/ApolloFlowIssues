@@ -10,12 +10,15 @@
 		"apollo-client": "^1.9.0-1",
 		"react": "16.0.0-alpha.12",
 		"react-apollo": "^1.4.8",
-		"react-native": "0.46.4"
+		"react-native": "0.46.4",
+		"react-redux": "^5.0.5",
+		"redux": "^3.7.2"
 	},
 	"devDependencies": {
 		"babel-jest": "20.0.3",
 		"babel-preset-react-native": "2.1.0",
 		"flow-bin": "^0.47.0",
+		"flow-typed": "^2.1.5",
 		"jest": "20.0.4",
 		"react-test-renderer": "16.0.0-alpha.12"
 	},
