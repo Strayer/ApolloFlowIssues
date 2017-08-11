@@ -87,7 +87,8 @@ class TheGraphQLThing extends PureComponent {
 }
 
 const withQuery: OperationComponent<Response> = graphql(
-    gql`query { allTrips { id } }`
+    gql`query { allTrips { id } }`,
+    { options: { fetchPolicy: "cache-and-network" } }
 );
 const TheGraphQLThingContainer = withQuery(TheGraphQLThing);
 
